@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - config/**/*
+    - db/*
+    - Gemfile
+    - Gemfile.lock
+    - Rakefile
+
+Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
