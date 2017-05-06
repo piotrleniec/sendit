@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/piotrleniec/sendit/badges/gpa.svg)](https://codeclimate.com/github/piotrleniec/sendit)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
