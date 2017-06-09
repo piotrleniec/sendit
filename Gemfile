@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Shim to load environment variables from .env into ENV in development
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Devise for users authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
