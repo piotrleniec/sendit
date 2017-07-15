@@ -5,14 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Shim to load environment variables from .env into ENV in development
-gem 'dotenv-rails', groups: [:development, :test]
-# Use Devise for users authentication
-gem 'devise'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.0'
-# Use Postgres as the databse
-gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -57,3 +49,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rubocop', require: false
+
+# Shim to load environment variables from .env into ENV in development
+gem 'dotenv-rails', groups: [:development, :test]
+# Use Devise for users authentication
+gem 'devise'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.1.0'
+# Use Postgres as the databse
+gem 'pg'
+# Use omniauth-facebook for facebook authentication
+gem 'omniauth-facebook'
