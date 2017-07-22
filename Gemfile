@@ -60,3 +60,5 @@ gem 'rails', '~> 5.1.0'
 gem 'pg'
 # Use omniauth-facebook for facebook authentication
 gem 'omniauth-facebook'
+# Use for interacting with Facebook API
+gem 'koala'
