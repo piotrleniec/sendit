@@ -1,3 +1,17 @@
 <h1>Hello World!</h1>
-<h3><%= current_user.email %></h3>
+<img src="<%= current_user.image %>">
+<% if current_user.provider == "facebook" %>
+  <h4>Facebook name: <%= @facebook_data["name"] %></h4>
+  <h4>Facebook email: <%= @facebook_data["email"] %></h4>
+  <h4>Total Facebook friends: <%= @facebook_data["friends"]["summary"]["total_count"] %></h4>
+  <% if @facebook_data["friends"]["data"].any? %>
+    <h4>List of friends who accepted Sendit:</h4>
+    <% @facebook_data["friends"]["data"].each do |friend| %>
+      <img src="<%= User.find_by(uid: friend["id"]).image %>" style="float:left;padding-right:10px">
+      <p><%= friend["name"] %></p>
+      <p><%= User.find_by(uid: friend["id"]).email %></p>
+    <% end %>
+  <% end %>
+<% end %>
+<h3>Current user email: <%= current_user.email %></h3>
 <p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>
